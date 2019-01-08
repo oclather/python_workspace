@@ -1,0 +1,13 @@
+E:\cdn_9187-20180808\android\v1.5.0.2010\hot\res\info.txt
+E:\cdn_9187-20180808\android\v1.5.4.2010\hot\res\info.txt
+F:\python_workspace\diffAndCopy\1.5.0-1.5.4-hot\
+
+前3行是配置：
+第一行：要对比的基础版本
+第二行：要对比的最终版本
+第三行：复制后的文件存放位置
+
+下面是举例。具体脚本只会读取前3行的配置
+C:\workspace\svn\v1.3.0_20180623_kuafu\client\AllRes\chs\resOnServer\v1.3.0.2000\hot\res\info.txt
+C:\workspace\svn\v1.3.0_20180623_kuafu\client\AllRes\chs\resOnServer\v1.3.23.2000\hot\res\info.txt
+C:\workspace\diff_files\
