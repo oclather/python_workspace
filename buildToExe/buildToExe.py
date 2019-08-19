@@ -29,6 +29,6 @@ setup(
     zipfile=None, #不生成library.zip文件
    
     # targets to build
-    console = [{"script": "F:\python_workspace\pushCDN\pushCDN.py"}],)#源文件，程序图标
+    console = ["F:\python_workspace\copy\copyFile.py"],)#源文件，程序图标
     #data_files=["D:\\ANDROID\\sdk\\build-tools\\android-4.2.2\\aapt.exe"]#引入外部文件
     

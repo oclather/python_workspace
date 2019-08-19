@@ -1,6 +1,6 @@
-E:\cdn_9187-20180808\android\v1.5.0.2010\hot\res\info.txt
-E:\cdn_9187-20180808\android\v1.5.4.2010\hot\res\info.txt
-F:\python_workspace\diffAndCopy\1.5.0-1.5.4-hot\
+E:\cdn_9187\android\v1.5.36.2010\hot\res\info.txt
+E:\cdn_9187\android\v1.5.63.2010\hot\res\info.txt
+F:\python_workspace\diffAndCopy\1.5.36-1.5.63-hot\
 
 前3行是配置：
 第一行：要对比的基础版本

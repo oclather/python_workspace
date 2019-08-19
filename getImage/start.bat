@@ -1,0 +1,3 @@
+python getImage.py
+
+pause
