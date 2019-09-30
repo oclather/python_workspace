@@ -4,14 +4,15 @@ echo 可执行以下操作：
 echo ----------------------------------------
 echo 1、解压文件到9187/android/
 echo 2、解压文件到9187/android_test/
-echo 3、解压文件到9130/android/
-echo 4、解压文件到9130/android_test/
+echo 3、解压文件到VN/android/
+echo 4、解压文件到VN/android_test/
 echo 5、修改版本号
 echo 7、解压文件到korea/android/
 echo 8、解压文件到korea/android_test/
 echo 9、解压文件到fanti/android/
 echo 0、解压文件到fanti/android_test/
 echo 11、将obb文件推送到模拟器
+echo 12、只覆盖改动的文件
 echo ----------------------------------------
 set /p select="请输入想要执行的操作编号："
 
@@ -25,6 +26,7 @@ if %select%==8 (goto 8)
 if %select%==9 (goto 9)
 if %select%==0 (goto 0)
 if %select%==11 (goto 11)
+if %select%==12 (goto 12)
 
 
 :1
@@ -67,7 +69,7 @@ goto loop
 
 :3
 @echo off
-set filepath="E:\cdn_9130\android"
+set filepath="E:\cdn_vn\android"
 @echo Begin unzip to %filepath%....
 @echo -------------------------------------------------------
 
@@ -86,7 +88,7 @@ goto loop
 
 :4
 @echo off
-set filepath="E:\cdn_9130\android_test"
+set filepath="E:\cdn_vn\android_test"
 @echo Begin unzip to %filepath%....
 @echo -------------------------------------------------------
 
@@ -174,4 +176,11 @@ goto loop
 :11
 @echo off
 python adbPush.py
+goto loop
+
+
+
+:12
+@echo off
+python cdnDiffResCopy.py
 goto loop
