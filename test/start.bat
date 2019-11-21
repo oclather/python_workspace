@@ -1,2 +1,2 @@
-python test.py
+python testGui.py
 pause exit

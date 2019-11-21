@@ -1,5 +1,5 @@
 @echo off
-python test.py
+python copyFile.py vn
 
 pause
 exit

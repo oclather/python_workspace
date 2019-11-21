@@ -1,5 +1,5 @@
 @echo off
-python copyFile.py
+python copyFile.py jp
 
 pause
 exit

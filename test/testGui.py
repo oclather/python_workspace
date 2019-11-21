@@ -1,3 +1,4 @@
+#coding=utf-8
 from Tkinter import *
 import tkMessageBox
 
@@ -13,7 +14,7 @@ class Application(Frame):
         self.nameInput.pack()
         self.alertButton = Button(self, text='Hello', command=self.hello)
         self.alertButton.pack()
-        self.quitButton = Button(self, text = "退出", command=self.quit)
+        self.quitButton = Button(self, text = "quit", command=self.quit)
         self.quitButton.pack()
     def hello(self):
         name = self.nameInput.get() or 'world'

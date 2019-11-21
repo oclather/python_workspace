@@ -1,0 +1,32 @@
+{
+'fanti':{
+	'pc_diff_path':r"C:\workspace\svn\v1.5.0_20190126_fanti\diff\client\pc",
+	'android_diff_path':r"C:\workspace\svn\v1.5.0_20190126_fanti\diff\client\android",
+	'ios_diff_path':r"C:\workspace\svn\v1.5.0_20190126_fanti\diff\client\ios",
+	'base_target_path':r"C:\workspace\svn\v1.5.0_20190126_fanti\client\AllRes\chs\fullRes"
+	},
+'korean':{
+	'pc_diff_path':r"C:\workspace\svn\v1.5.0_20181114_korean\diff\client\pc",
+	'android_diff_path':r"C:\workspace\svn\v1.5.0_20181114_korean\diff\client\android",
+	'ios_diff_path':r"C:\workspace\svn\v1.5.0_20181114_korean\diff\client\ios",
+	'base_target_path':r"C:\workspace\svn\v1.5.0_20181114_korean\client\AllRes\chs\fullRes"
+	},
+'jp':{
+	'pc_diff_path':r"H:\v1.5.103_20190929_JP\diff\client\pc",
+	'android_diff_path':r"H:\v1.5.103_20190929_JP\diff\client\android",
+	'ios_diff_path':r"H:\v1.5.103_20190929_JP\diff\client\ios",
+	'base_target_path':r"H:\v1.5.103_20190929_JP\client\AllRes\chs\fullRes"
+	},
+'russian':{
+	'pc_diff_path':r"H:\russian\diff\client\pc",
+	'android_diff_path':r"H:\russian\diff\client\android",
+	'ios_diff_path':r"H:\russian\diff\client\ios",
+	'base_target_path':r"H:\russian\client\AllRes\chs\fullRes"
+	},
+'vn':{
+	'pc_diff_path':r"H:\v1.5.103_20190918_VN\diff\client\pc",
+	'android_diff_path':r"H:\v1.5.103_20190918_VN\diff\client\android",
+	'ios_diff_path':r"H:\v1.5.103_20190918_VN\diff\client\ios",
+	'base_target_path':r"H:\v1.5.103_20190918_VN\client\AllRes\chs\fullRes"
+	}
+}
