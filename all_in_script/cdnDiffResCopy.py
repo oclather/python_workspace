@@ -64,7 +64,7 @@ def copy_diff_file(diffinfo_file,copypath,dstPath):
     count = 0
     print "Is copying! Please wait a moment..."
     for i in copied_info:
-        filename = reString(".*\..* ",i) #获取info中的文件路径和文件名,后面带1个空格，使用copy命令时则不用继续加空格。不要后面的md5
+        filename = reString(".*? ",i) #获取info中的文件路径和文件名,后面带1个空格，使用copy命令时则不用继续加空格。不要后面的md5
 
         if filename:#这里为了判断是否是文件夹，如果是文件夹，则不进行后续的复制操作；否则创建文件夹结构再复制到对应文件夹下
             filepath = reString(".*/",filename[0])
@@ -92,7 +92,7 @@ def main():
 
     targetpath = raw_input(encodeString(r"请输入要解压的目标位置，如：E:\cdn_9187\android 以平台结尾："))
     #targetpath = r"E:\cdn_korea\android"
-    version = reString(r"(?<=android\\).*?(?=_)|(?<=ios\\).*?(?=_)",zipfile)[0] 
+    version = reString(r"v\d{1,4}.\d{1,4}.\d{1,4}.\d{1,4}",zipfile)[0] #原来的正则：(?<=android\\).*?(?=_)|(?<=ios\\).*?(?=_)
 
     hotinfo_old = targetpath + "\\" + version + "\\hot\\res\\info.txt"
     #print hotinfo_old
@@ -112,7 +112,10 @@ def main():
     if os.path.exists(hotinfo_old):#判断是否已经有旧资源。
         print encodeString("目标位置已存在文件夹：" + dstPath1 )#根据是否存在hot/res/info.txt来判断是不是已经解压过
         print encodeString("将进行对比差异再覆盖！")
+        print encodeString("正在清理临时目录...")
         os.popen("rmdir /s /q C:\\temp") #先清理临时目录
+        print encodeString("清理完成")
+        print "-"*50
         os.system("7z x " + zipfile + " -oC:\\temp" )
 
         diffFiles(hotinfo_new,hotinfo_old,"info_diff_new-old.txt")#新的info和旧的info对比，获得差异文件，用于复制
@@ -125,7 +128,7 @@ def main():
             print encodeString("hot没有差异，不复制！")
             print "-"*50
 
-        if os.path.getsize("opinfo_diff_new-old.txt") > 0:  #判断差异文件是否为空。  
+        if os.path.getsize("opinfo_diff_new-old.txt") > 0:   #判断差异文件是否为空。  
             copy_diff_file("opinfo_diff_new-old.txt", copypath2 , dstPath2) 
             copyFile(opinfo_new," "+dstPath2)
         else:
@@ -133,12 +136,17 @@ def main():
             print "-"*50
 
         print encodeString("正在清理临时目录...")
+        os.popen("rmdir /s /q C:\\temp") #先清理临时目录
+        print encodeString("清理完成")
+        '''
+        print encodeString("正在清理临时目录...")
         os.popen("rmdir /s /q C:\\temp")
         print encodeString("清理完成")
         print "-"*50
+        '''
     else: #没有旧资源旧直接解压
         print encodeString("目标位置没有该版本资源，直接解压文件！")
         os.system("7z x " + zipfile + " -o" + targetpath)
 
-while True:
+if __name__ == '__main__':
     main()

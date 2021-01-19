@@ -1,0 +1,23 @@
+1、解包：
+将要解包的apk放入apktool目录下
+CDM进入到apktools目录下，使用命令：apktool d xxx.apk
+
+2、修改解包文件夹内的内容
+
+3、重新打包：
+使用命令：apktool b app -o other.apk
+
+4、重新签名：
+java -jar signapk.jar testkey.x509.pem testkey.pk8 xxx.apk xxx_new.apk
+
+app就是刚才生产的文件夹
+
+
+
+也可以直接使用bat脚本
+1、解包：0-jiebao.bat
+2、打包：0-dabao.bat
+	需要拖入第一步解包后生成的文件夹
+3、签名：0-sign.bat
+	需要拖入第二部打包后，生成的apk
+	最终生成的apk即可安装使用
