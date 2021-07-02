@@ -77,7 +77,7 @@ class IdNumber(str):
         # 随机生成一个区域码(6位数)
         id_number = str(random.choice(list(const.AREA_INFO.keys())))
         # 限定出生日期范围(8位数)
-        start, end = datetime.strptime("1990-01-01", "%Y-%m-%d"), datetime.strptime("2000-12-30", "%Y-%m-%d")
+        start, end = datetime.strptime("1990-01-01", "%Y-%m-%d"), datetime.strptime("1993-12-30", "%Y-%m-%d")
         birth_days = datetime.strftime(start + timedelta(random.randint(0, (end - start).days + 1)), "%Y%m%d")
         id_number += str(birth_days)
         # 顺序码(2位数)
